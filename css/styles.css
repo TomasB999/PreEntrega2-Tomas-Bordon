@@ -348,41 +348,7 @@ textarea {
     background-color: #960202; 
 }
 
-/* .contactts{
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    flex-direction: column; 
-    text-align: center; 
-    padding: 6rem;
-    background-image: url(../assets/pexels-pixabay-163582.jpg);
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    color: rgb(240, 240, 240);
-    width: auto;
-}
-#googlemap{
-    display: flex;
-    justify-content: center;
-    align-items: center; 
-    flex-direction: column; 
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-}
-input, select {
-    display: block;
-    margin-bottom: 0.5rem;
-}
-textarea {
-    height: 6rem;
-}
-.btn-submit {
-    background-color: #A60303;
-    border-radius: 4%;
-    width: 6rem;
-    height: 4rem;
-} */
+
 .boton1 {
     background-color: #A60303;
     border-radius: 4%;
