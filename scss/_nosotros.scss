@@ -1,0 +1,88 @@
+#bmwverde {
+    display: flex;
+    width: 100%;
+}
+
+.quienesomos {
+    font-size: 4rem;
+    color: #A60303;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+.botonn{
+    margin: auto;
+    padding: 10px 20px; 
+    font-size: 20px; 
+    width: auto; 
+    height: auto;
+    background-color: #A60303;
+}
+.noso1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; // Centra horizontalmente
+    align-items: center; // Centra verticalmente
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 5px;
+    font-size: 30px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 2px solid red;
+    padding-bottom: 30px;
+    border-top: 2px solid red;
+
+    // Estilos adicionales para los párrafos
+    p {
+        margin: 0;
+        width: 100%; // Asegura que los párrafos ocupen todo el ancho del contenedor
+    }
+}
+
+#mapita {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#trabajoss {
+    color: #A60303;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 5px;
+    object-fit: cover;
+}
+
+.image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+        width: auto;
+        height: auto;
+    }
+}
+
+#descubre {
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
