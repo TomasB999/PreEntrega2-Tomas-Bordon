@@ -1,63 +1,88 @@
-#bmwverde {
-    display: flex;
-    width: 100%;
-}
 
-.quienesomos {
-    font-size: 4rem;
-    color: #A60303;
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
-}
-.botonn{
+$primary-color: #A60303;
+$border-color: red;
+
+// Mixin para estilos comunes de botón
+@mixin button-styles {
     margin: auto;
     padding: 10px 20px; 
     font-size: 20px; 
     width: auto; 
     height: auto;
-    background-color: #A60303;
+    background-color: $primary-color;
+    color: white;
 }
-.noso1 {
+
+// Mixin para centrar horizontal y verticalmente
+@mixin center {
     display: flex;
-    flex-direction: column;
-    justify-content: center; // Centra horizontalmente
-    align-items: center; // Centra verticalmente
+    justify-content: center;
+    align-items: center;
+}
+
+// Mixin para estilos comunes de texto
+@mixin text-styles {
     font-family: "Bebas Neue", sans-serif;
     font-weight: 400;
     font-style: normal;
     text-align: center;
+}
+
+// Mixin para estilos comunes de borde inferior
+@mixin border-bottom {
+    border-bottom: 2px solid $border-color;
+}
+
+// Mixin para estilos comunes de párrafo
+@mixin paragraph-styles {
+    margin: 0;
+    width: 100%;
+}
+
+#bmwverde {
+    @include center; // Aplicar mixin para centrar
+    width: 100%;
+}
+
+.quienesomos {
+    @include text-styles;
+    font-size: 4rem;
+    color: $primary-color;
+}
+
+.botonn {
+    @include button-styles;
+}
+
+.noso1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include text-styles; // Aplicar mixin para estilos de texto
     padding: 1rem;
     margin-top: 5px;
     font-size: 30px;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
-    border-bottom: 2px solid red;
+    @include border-bottom; // Aplicar mixin para borde inferior
     padding-bottom: 30px;
-    border-top: 2px solid red;
+    border-top: 2px solid $border-color;
 
-    // Estilos adicionales para los párrafos
+    // Aplicar mixin para estilos de párrafo
     p {
-        margin: 0;
-        width: 100%; // Asegura que los párrafos ocupen todo el ancho del contenedor
+        @include paragraph-styles;
     }
 }
 
 #mapita {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include center; // Aplicar mixin para centrar
 }
 
 #trabajoss {
-    color: #A60303;
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
+    @include text-styles; // Aplicar mixin para estilos de texto
+    color: $primary-color;
 }
 
 #gallery {
@@ -81,8 +106,6 @@
 }
 
 #descubre {
-    font-family: "Bebas Neue", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    text-align: center;
+    @include text-styles; // Aplicar mixin para estilos de texto
 }
+

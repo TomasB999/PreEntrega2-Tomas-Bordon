@@ -1,19 +1,42 @@
+$color-rojo: #A60303;
+$color-oscuro: #0D0D0D;
+$color-verde: green;
+$espacio-tarjetas: 4rem;
+
+// Definir mixin para estilos de botones
+@mixin button-styles {
+    display: block;
+    padding: 10px;
+    background-color: $color-rojo;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #750000;
+    }
+}
+
+
 #tienda {
-    color: #A60303;
+    color: $color-rojo;
     text-align: center;
     margin: 20px;
 }
 
+
 .card-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 4rem; // Aumentado el espacio entre las tarjetas
+    gap: $espacio-tarjetas;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
     box-sizing: border-box;
 }
 
+// Estilos para las tarjetas .card4
 .card4 {
     border: 3px solid #ccc;
     border-radius: 8px;
@@ -25,14 +48,14 @@
     box-sizing: border-box;
 
     h2 {
-        font-size: 28px; // Aumentado el tamaño de los títulos h2
-        color: #A60303;
+        font-size: 28px;
+        color: $color-rojo;
         margin-bottom: 10px;
         text-align: center;
     }
 
     h4 {
-        font-size: 20px; // Aumentado el tamaño de los títulos h4
+        font-size: 20px;
         margin-top: 0;
         margin-bottom: 15px;
         text-align: center;
@@ -54,7 +77,7 @@
         height: auto;
         margin-bottom: 15px;
         border-radius: 8px;
-        object-fit: cover; // Ajusta el tamaño de la imagen
+        object-fit: cover;
     }
 
     .card-content4 {
@@ -65,26 +88,18 @@
         overflow-y: auto;
     }
 
+    
     .boton1 {
         width: 100%;
         text-align: center;
 
         a {
-            display: block;
-            padding: 10px;
-            background-color: #A60303;
-            color: white;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-
-            &:hover {
-                background-color: #750000;
-            }
+            @include button-styles;
         }
     }
 }
 
+// Media queries para dispositivos móviles
 @media screen and (min-width: 320px) and (max-width: 580px) {
     .card-container {
         grid-template-columns: 1fr;
@@ -94,15 +109,20 @@
 
     .card4 {
         padding: 10px;
+
         h2 {
             font-size: 24px;
         }
+
         h4 {
             font-size: 18px;
         }
+
         p {
             font-size: 18px;
         }
+
+        
         .boton1 {
             a {
                 padding: 8px;
@@ -110,4 +130,5 @@
         }
     }
 }
+
 
